@@ -32,6 +32,19 @@ const ModalB = ({ onClose, onSwitchToAllContacts }) => {
     setOnlyEven((prev) => !prev);
   };
 
+  const buttonAStyle = {
+    backgroundColor: "#46139f",
+    color: "white",
+  };
+  const buttonBStyle = {
+    backgroundColor: "#ff7f50",
+    color: "white",
+  };
+  const closeButtonStyle = {
+    backgroundColor: "#46139f",
+    color: "white",
+  };
+
   return (
     <div>
       <h2>US Contacts</h2>
@@ -46,8 +59,16 @@ const ModalB = ({ onClose, onSwitchToAllContacts }) => {
           ))}
       </ul>
 
-      <button onClick={onClose}>Close</button>
-      <button onClick={onSwitchToAllContacts}>Switch to All Contacts</button>
+      <button style={buttonAStyle} onClick={onSwitchToAllContacts}>
+        All Contact
+      </button>
+      <button style={buttonBStyle} className="mx-2">
+        UD Contact
+      </button>
+      <button onClick={onClose} style={closeButtonStyle}>
+        Close
+      </button>
+
       <hr />
       <label>
         <input
