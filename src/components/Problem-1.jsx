@@ -31,7 +31,7 @@ const Problem1 = () => {
         return newData;
       });
 
-    event.target;
+    event.target.reset();
   };
 
   const filterData = (status) => {
